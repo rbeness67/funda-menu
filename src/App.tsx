@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Button } from "./components/ui/button";
 import { MenuApp } from "./components/menu-app";
 import logo from "@/assets/logo.png";
 

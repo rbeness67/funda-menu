@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "../ui/card";
 import styles from "./sandwich-tab.module.css";
 
 type MenuItem = {
@@ -6,6 +6,10 @@ type MenuItem = {
   description?: string;
   price: string;
   order: number;
+};
+
+type SandwichTacosTabProps = {
+  label: string;
 };
 
 /* =========================
@@ -198,13 +202,18 @@ function OfferMenuCard() {
   );
 }
 
-export function SandwichTacosTab() {
+export function SandwichTacosTab({ label }: SandwichTacosTabProps) {
   const tacosSorted = [...TACOS_ITEMS].sort((a, b) => a.order - b.order);
   const burgersSorted = [...BURGER_ITEMS].sort((a, b) => a.order - b.order);
-  const sandwichesSorted = [...SANDWICH_ITEMS].sort((a, b) => a.order - b.order);
+  const sandwichesSorted = [...SANDWICH_ITEMS].sort(
+    (a, b) => a.order - b.order
+  );
 
   return (
     <div className={styles.grid}>
+      {/* Optional page title from parent category */}
+      <h1 className={styles.pageTitle}>{label}</h1>
+
       {/* TACOS */}
       <Card className={`${styles.menuCard} ${styles.tacosCard}`}>
         <CardHeader className={styles.menuHeader}>

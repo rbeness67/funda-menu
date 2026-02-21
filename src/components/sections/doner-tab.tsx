@@ -1,9 +1,9 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "../ui/card";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "../ui/collapsible";
 import styles from "./doner-tab.module.css";
 import { useEffect, useState } from "react";
 
@@ -12,6 +12,10 @@ type MenuItem = {
   description?: string;
   price: string;
   order: number;
+};
+
+type DonerTabProps = {
+  label: string;
 };
 
 const DONER_ITEMS: MenuItem[] = [
@@ -24,36 +28,36 @@ const DONER_ITEMS: MenuItem[] = [
     order: 50,
     name: "Forestier",
     description: "Kebab poulet, champignons et oignons grillés",
-    price: "7.50 €"
+    price: "7.50 €",
   },
   {
     order: 60,
     name: "Berliner",
     description:
       "Viande de kebab poulet, aubergine grillée, courgette grillée, salade, oignon, chou rouge, fêta, sauce blanche",
-    price: "8.50 €"
+    price: "8.50 €",
   },
   {
     order: 70,
     name: "Gourmand",
     description:
       "Viande de kebab poulet et sucuk grillé, salade, oignons frits, ketchup et mayonnaise",
-    price: "8.50 €"
+    price: "8.50 €",
   },
   {
     order: 80,
     name: "Spicy",
     description:
       "Viande de kebab poulet, poivrons verts et rouges grillés, salade, piments jalapeño, sauce blanche",
-    price: "8.50 €"
+    price: "8.50 €",
   },
   {
     order: 90,
     name: "Rösti",
     description:
       "Viande de kebab poulet, galette de pommes de terre, salade, fêta, oignon, mayonnaise",
-    price: "8.50 €"
-  }
+    price: "8.50 €",
+  },
 ];
 
 const YUFKA_ITEMS: MenuItem[] = [
@@ -64,7 +68,7 @@ const YUFKA_ITEMS: MenuItem[] = [
   { order: 50, name: "Yufka brochettes de poulet", price: "8.50 €" },
   { order: 60, name: "Yufka crudités", price: "7.50 €" },
   { order: 70, name: "Yufka falafel", price: "6.50 €" },
-  { order: 80, name: "Yufka galette de pommes de terre", price: "6.50 €" }
+  { order: 80, name: "Yufka galette de pommes de terre", price: "6.50 €" },
 ];
 
 const BOX_ITEMS: MenuItem[] = [
@@ -94,7 +98,6 @@ function MenuList({ items }: { items: MenuItem[] }) {
     </ul>
   );
 }
-
 
 function OfferMenuCard() {
   const crudites = [
@@ -159,7 +162,6 @@ function OfferMenuCard() {
   return (
     <Card className={styles.offerCard} aria-label="Offre menu">
       <CardContent className={styles.offerContent}>
-        {/* ✅ TITRE + PRIX (comme avant) */}
         <div className={styles.offerTop}>
           <div className={styles.offerEyebrow}>Offre menu</div>
 
@@ -172,7 +174,6 @@ function OfferMenuCard() {
         </div>
 
         <div className={styles.offerGrid}>
-          {/* ✅ RÈGLES (comme avant) */}
           <div className={styles.offerBlock}>
             <div className={styles.offerLabel}>Règles par sandwich</div>
             <div className={styles.offerPills}>
@@ -181,7 +182,6 @@ function OfferMenuCard() {
             </div>
           </div>
 
-          {/* ✅ CRUDITÉS (collapsible mobile-only) */}
           <div className={styles.offerBlock}>
             {isMobile ? (
               <Collapsible open={openCrudites} onOpenChange={setOpenCrudites}>
@@ -226,7 +226,6 @@ function OfferMenuCard() {
             )}
           </div>
 
-          {/* ✅ SAUCES (collapsible mobile-only) */}
           <div className={styles.offerBlock}>
             {isMobile ? (
               <Collapsible open={openSauces} onOpenChange={setOpenSauces}>
@@ -277,13 +276,17 @@ function OfferMenuCard() {
     </Card>
   );
 }
-export function DonerTab() {
+
+export function DonerTab({ label }: DonerTabProps) {
   const donerSorted = [...DONER_ITEMS].sort((a, b) => a.order - b.order);
   const yufkaSorted = [...YUFKA_ITEMS].sort((a, b) => a.order - b.order);
   const boxSorted = [...BOX_ITEMS].sort((a, b) => a.order - b.order);
 
   return (
     <div className={styles.grid}>
+      {/* Optional page title from parent category */}
+      <h1 className={styles.pageTitle}>{label}</h1>
+
       {/* Offre menu en haut */}
       <OfferMenuCard />
 

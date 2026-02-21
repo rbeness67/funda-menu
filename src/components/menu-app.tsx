@@ -1,12 +1,11 @@
 import { useState } from "react";
-import data from "@/config.json";
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import data from "../config.json"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
 import styles from "./menu-app.module.css";
 
-import { DonerTab } from "@/components/sections/doner-tab";
-import { SandwichTacosTab } from "@/components/sections/sandwich-tab";
-import { DefaultTab } from "@/components/sections/default-tab";
+import { DonerTab } from "./sections/doner-tab";
+import { SandwichTacosTab } from "./sections/sandwich-tab";
+import { DefaultTab } from "./sections/default-tab";
 
 type Category = { id: string; label: string };
 
