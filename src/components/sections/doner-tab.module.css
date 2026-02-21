@@ -1,3 +1,5 @@
+/* doner-tab.module.css */
+
 /* =========================
    Layout
    ========================= */
@@ -14,6 +16,7 @@
     align-items: start;
   }
 }
+
 /* =========================
    Cards (premium glass)
    ========================= */
@@ -169,6 +172,7 @@
     transparent
   );
 }
+
 .offerCard {
   grid-column: 1 / -1; /* full width under the 2 cards */
   border-radius: 1.25rem;
@@ -227,7 +231,7 @@
 
 @media (min-width: 768px) {
   .offerGrid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: start;
   }
 }
@@ -304,6 +308,16 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(254, 243, 199, 0.75);
+}
+
+/* =========================
+   Badges inside menu cards
+   ========================= */
+
+.cardRules {
+  margin: 0.15rem 0 0.85rem;
+  display: flex;
+  justify-content: center;
 }
 
 /* =========================

@@ -1,3 +1,4 @@
+// doner-tab.tsx
 import { Card, CardContent, CardHeader } from "../ui/card";
 import {
   Collapsible,
@@ -23,7 +24,6 @@ const DONER_ITEMS: MenuItem[] = [
   { order: 20, name: "Kebab bœuf", price: "7.50 €" },
   { order: 30, name: "Kebab mixte", price: "8.00 €" },
   { order: 40, name: "Végétarien", price: "7.00 €" },
-
   {
     order: 50,
     name: "Forestier",
@@ -96,6 +96,17 @@ function MenuList({ items }: { items: MenuItem[] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+function RulesBadges() {
+  return (
+    <div className={styles.cardRules} aria-label="Règles par sandwich">
+      <div className={styles.offerPills}>
+        <span className={styles.offerPill}>5 crudités max</span>
+        <span className={styles.offerPill}>3 sauces max</span>
+      </div>
+    </div>
   );
 }
 
@@ -174,13 +185,7 @@ function OfferMenuCard() {
         </div>
 
         <div className={styles.offerGrid}>
-          <div className={styles.offerBlock}>
-            <div className={styles.offerLabel}>Règles par sandwich</div>
-            <div className={styles.offerPills}>
-              <span className={styles.offerPill}>5 crudités max</span>
-              <span className={styles.offerPill}>3 sauces max</span>
-            </div>
-          </div>
+          {/* Pills removed from offer card */}
 
           <div className={styles.offerBlock}>
             {isMobile ? (
@@ -277,14 +282,13 @@ function OfferMenuCard() {
   );
 }
 
-export function DonerTab({  }: DonerTabProps) {
+export function DonerTab({}: DonerTabProps) {
   const donerSorted = [...DONER_ITEMS].sort((a, b) => a.order - b.order);
   const yufkaSorted = [...YUFKA_ITEMS].sort((a, b) => a.order - b.order);
   const boxSorted = [...BOX_ITEMS].sort((a, b) => a.order - b.order);
 
   return (
     <div className={styles.grid}>
-
       {/* Offre menu en haut */}
       <OfferMenuCard />
 
@@ -294,6 +298,7 @@ export function DonerTab({  }: DonerTabProps) {
           <h2 className={styles.categoryTitle}>Doner</h2>
         </CardHeader>
         <CardContent className={styles.menuContent}>
+          <RulesBadges />
           <MenuList items={donerSorted} />
         </CardContent>
       </Card>
@@ -304,6 +309,7 @@ export function DonerTab({  }: DonerTabProps) {
           <h2 className={styles.categoryTitle}>Yufka</h2>
         </CardHeader>
         <CardContent className={styles.menuContent}>
+          <RulesBadges />
           <MenuList items={yufkaSorted} />
         </CardContent>
       </Card>
@@ -314,6 +320,7 @@ export function DonerTab({  }: DonerTabProps) {
           <h2 className={styles.categoryTitle}>Box</h2>
         </CardHeader>
         <CardContent className={styles.menuContent}>
+          <RulesBadges />
           <MenuList items={boxSorted} />
         </CardContent>
       </Card>
