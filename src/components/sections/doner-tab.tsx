@@ -277,7 +277,7 @@ function OfferMenuCard() {
   );
 }
 
-export function DonerTab({ label }: DonerTabProps) {
+export function DonerTab({  }: DonerTabProps) {
   const donerSorted = [...DONER_ITEMS].sort((a, b) => a.order - b.order);
   const yufkaSorted = [...YUFKA_ITEMS].sort((a, b) => a.order - b.order);
   const boxSorted = [...BOX_ITEMS].sort((a, b) => a.order - b.order);
