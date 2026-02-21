@@ -284,8 +284,6 @@ export function DonerTab({ label }: DonerTabProps) {
 
   return (
     <div className={styles.grid}>
-      {/* Optional page title from parent category */}
-      <h1 className={styles.pageTitle}>{label}</h1>
 
       {/* Offre menu en haut */}
       <OfferMenuCard />

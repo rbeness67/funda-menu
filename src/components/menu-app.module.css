@@ -320,3 +320,127 @@
   text-transform: uppercase;
   color: rgba(254, 243, 199, 0.75);
 }
+
+/* =========================
+   Sticky brand (logo + home)
+   ========================= */
+
+.brandSticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  padding-top: 0.75rem;
+  padding-bottom: 0.55rem;
+
+  background: rgba(12, 10, 9, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(120, 113, 108, 0.18);
+}
+
+.brandBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* logo + titre centrés */
+  min-height: 64px;
+}
+
+.brandCenter {
+  display: grid;
+  justify-items: center;
+  gap: 0.3rem;
+}
+
+.logo {
+  height: 56px;
+  width: auto;
+  opacity: 0.95;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    height: 70px;
+  }
+}
+
+.brandTitle {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  color: rgba(250, 250, 249, 0.95);
+}
+
+/* bouton accueil (haut droite) */
+.homeBtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(214, 211, 209, 0.95);
+  text-decoration: none;
+
+  background: rgba(28, 25, 23, 0.45);
+  border: 1px solid rgba(120, 113, 108, 0.28);
+
+  transition: transform 160ms ease, background 160ms ease,
+    border-color 160ms ease, color 160ms ease;
+}
+
+.homeBtn:hover {
+  color: rgba(250, 250, 249, 0.98);
+  background: rgba(28, 25, 23, 0.65);
+  border-color: rgba(120, 113, 108, 0.38);
+  transform: translateY(calc(-50% - 1px));
+}
+
+.homeBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(214, 211, 209, 0.22);
+}
+
+.homeBtnIcon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* =========================
+   Tabbar sticky (update)
+   ========================= */
+
+/* IMPORTANT: tabbar doit passer sous le brandSticky.
+   Ajuste le top à la hauteur du brandSticky. */
+.tabbarSticky {
+  position: sticky;
+  top: 88px; /* ✅ approx hauteur brandSticky */
+  z-index: 40;
+
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
+  background: rgba(12, 10, 9, 0.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(120, 113, 108, 0.18);
+
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .tabbarSticky {
+    top: 100px; /* un peu plus grand avec logo plus grand */
+  }
+}
