@@ -1,0 +1,10 @@
+{
+  "restaurantName": "Somer Grill",
+  "categories": [
+  { "id": "doner", "label": "Doner & Yufka" },
+  { "id": "sandwich_tacos", "label": "Sandwichs & Tacos" },
+  { "id": "bowls_assiettes", "label": "Bowls & Assiettes" },
+  { "id": "pizza_pide", "label": "Pizzas & Pides" },
+  { "id": "boissons", "label": "Boissons" }
+]
+}
