@@ -171,7 +171,7 @@ export function OfferMenuCard() {
         <div className={styles.offerFooter}>
           <div className={styles.offerMetaRow}>
             <span className={styles.offerMetaChip}>
-              Viande <strong>Halal</strong>
+              Viande Halal
             </span>
             <span className={styles.offerMetaChip}>
               Barquette frites <strong>3 €</strong>
