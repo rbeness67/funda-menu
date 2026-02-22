@@ -11,22 +11,17 @@ export type MenuItem = {
 
 export type MenuSection = {
   title: string;
+
+  /** NEW: badges displayed under the card title */
+  badges?: string[];
+
   items: MenuItem[];
 };
 
 export type CategoryConfig = {
   id: string;
   label: string;
-
-  /** If true, the offer menu is displayed at top for this tab */
   showOfferMenu?: boolean;
-
-  /** Optional hero badge (useful for "DONER" style title) */
-  heroBadge?: {
-    text: string;
-  };
-
-  /** Cards to display in this tab */
   sections: MenuSection[];
 };
 
@@ -51,6 +46,32 @@ function MenuList({ items }: { items: MenuItem[] }) {
   );
 }
 
+function SectionHeader({
+  title,
+  badges,
+}: {
+  title: string;
+  badges?: string[];
+}) {
+  const hasBadges = Array.isArray(badges) && badges.length > 0;
+
+  return (
+    <div className={styles.headerStack}>
+      <div className={styles.categoryTitle}>{title}</div>
+
+      {hasBadges ? (
+        <div className={styles.badges} aria-label={`Badges ${title}`}>
+          {badges!.map((b) => (
+            <span key={b} className={styles.badge}>
+              {b}
+            </span>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 export function CategoryTab({ category }: { category: CategoryConfig }) {
   return (
     <div className={styles.grid} aria-label={category.label}>
@@ -63,13 +84,7 @@ export function CategoryTab({ category }: { category: CategoryConfig }) {
           aria-label={section.title}
         >
           <CardHeader className={styles.menuHeader}>
-            {category.heroBadge ? (
-              <div className={styles.donerBadge}>
-                <div className={styles.donerText}>{category.heroBadge.text}</div>
-              </div>
-            ) : (
-              <div className={styles.categoryTitle}>{section.title}</div>
-            )}
+            <SectionHeader title={section.title} badges={section.badges} />
           </CardHeader>
 
           <CardContent className={styles.menuContent}>

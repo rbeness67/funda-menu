@@ -3,11 +3,24 @@
   "categories": [
     {
       "id": "doner_yufka",
-      "label": "Döner / Yufka",
+      "label": "Döner & Yufka",
       "showOfferMenu": true,
       "sections": [
         {
+          "title": "Box",
+          "badges": ["5 crudités max", "3 sauces max"],
+          "items": [
+            {
+              "order": 10,
+              "name": "Box",
+              "description": "Viande de kebab au choix • 5 crudités max • 3 sauces max • Crudités & frites",
+              "price": "7.50 €"
+            }
+          ]
+        },
+        {
           "title": "Döner",
+          "badges": ["5 crudités max", "3 sauces max"],
           "items": [
             { "order": 10, "name": "Kebab poulet", "price": "7.50 €" },
             { "order": 20, "name": "Kebab bœuf", "price": "7.50 €" },
@@ -47,6 +60,7 @@
         },
         {
           "title": "Yufka",
+          "badges": ["5 crudités max", "3 sauces max"],
           "items": [
             { "order": 10, "name": "Yufka poulet", "price": "8.00 €" },
             { "order": 20, "name": "Yufka bœuf", "price": "8.00 €" },
@@ -57,28 +71,17 @@
             { "order": 70, "name": "Yufka falafel", "price": "6.50 €" },
             { "order": 80, "name": "Yufka galette de pommes de terre", "price": "6.50 €" }
           ]
-        },
-        {
-          "title": "Box",
-          "items": [
-            {
-              "order": 10,
-              "name": "Box",
-              "description": "Viande de kebab au choix • 5 crudités max • 3 sauces max • Crudités & frites",
-              "price": "7.50 €"
-            }
-          ]
         }
       ]
     },
-
     {
       "id": "sandwich_tacos",
-      "label": "Sandwich / Tacos",
+      "label": "Tacos, Burger & Sandwich",
       "showOfferMenu": true,
       "sections": [
         {
           "title": "Tacos",
+          "badges": ["5 crudités max", "3 sauces max"],
           "items": [
             { "order": 10, "name": "Tacos kebab poulet", "price": "8.00 €" },
             { "order": 20, "name": "Tacos kebab bœuf", "price": "8.00 €" },
@@ -96,6 +99,7 @@
         },
         {
           "title": "Burgers",
+          "badges": ["5 crudités max", "3 sauces max"],
           "items": [
             {
               "order": 10,
@@ -143,6 +147,7 @@
         },
         {
           "title": "Sandwiches",
+          "badges": ["5 crudités max", "3 sauces max"],
           "items": [
             { "order": 10, "name": "Sandwich brochettes de poulet", "price": "8.00 €" },
             { "order": 20, "name": "Sandwich brochettes d’agneau", "price": "8.50 €" },
@@ -153,6 +158,203 @@
           ]
         }
       ]
+    },
+    {
+      "id": "assiettes_bowls",
+      "label": "Assiettes & Bowls",
+      "showOfferMenu": false,
+      "sections": [
+        {
+          "title": "Assiettes",
+          "badges": ["accompagné de crudités ou frites ou boulgour"],
+          "items": [
+            { "order": 10, "name": "Kebab poulet", "price": "13.00 €" },
+            { "order": 20, "name": "Kebab bœuf", "price": "13.00 €" },
+            { "order": 30, "name": "Kebab mixte", "price": "13.50 €" },
+            { "order": 40, "name": "Köfte", "price": "13.50 €" },
+            { "order": 50, "name": "Brochettes de poulet", "price": "13.50 €" },
+            {
+              "order": 60,
+              "name": "Grillades mixtes",
+              "description": "3 grillades au choix : brochettes de poulet, köfte, merguez ou brochettes d’agneau",
+              "price": "17.00 €"
+            },
+            { "order": 70, "name": "Brochettes d’agneau", "price": "15.50 €" },
+            { "order": 80, "name": "Merguez", "price": "13.50 €" },
+            {
+              "order": 90,
+              "name": "Assiette suprême",
+              "description": "1 viande de kebab + 2 grillades au choix",
+              "price": "16.00 €"
+            },
+            {
+              "order": 100,
+              "name": "Assiette duo",
+              "description": "1 viande kebab + 1 viande au choix",
+              "price": "14.50 €"
+            }
+          ]
+        },
+        {
+          "title": "Bowls",
+          "badges": ["base frites et sauce fromagère", "contenance 1L"],
+          "items": [
+            {
+              "order": 10,
+              "name": "Kebab poulet",
+              "description": "Sauce algérienne, oignons frits, salade, piments jalapeño, tomates",
+              "price": "9.50 €"
+            },
+            {
+              "order": 20,
+              "name": "Tenders & lardons",
+              "description": "Sauce samouraï, oignons frits, salade, tomates",
+              "price": "9.50 €"
+            },
+            {
+              "order": 30,
+              "name": "Steak & cheese",
+              "description": "Sauce algérienne, cheddar, oignons frits, salade, tomates",
+              "price": "9.50 €"
+            },
+            {
+              "order": 40,
+              "name": "Brochette de poulet & oignons",
+              "description": "Sauce curry, oignons frits, salade, tomates",
+              "price": "9.50 €"
+            },
+            {
+              "order": 50,
+              "name": "Cordon bleu & lardons",
+              "description": "Sauce blanche, oignons frits, salade, tomates",
+              "price": "9.50 €"
+            },
+            {
+              "order": 60,
+              "name": "Le végé",
+              "description": "Mayonnaise, falafels, galette de pomme de terre, oignons frits, salade, tomates",
+              "price": "9.00 €"
+            },
+            {
+              "order": 70,
+              "name": "Le spécial",
+              "description": "Ketchup, mayonnaise, suçuk grillé, nuggets, oignons frits, salade, tomates",
+              "price": "10.00 €"
+            },
+            { "order": 80, "name": "Salade mixte petite", "price": "5.50 €" },
+            { "order": 90, "name": "Salade mixte grande", "price": "8.50 €" }
+          ]
+        }
+      ]
+    },
+    {
+  "id": "pizza_pide_tarte",
+  "label": "Pizzas, Pides & Tartes flambées",
+  "showOfferMenu": false,
+  "sections": [
+    {
+      "title": "Pizzas",
+      "badges": ["Viande halal", "Pâte faite maison", "Base tomate ou crème fraîche"],
+      "items": [
+        { "order": 10, "name": "Margherita", "description": "Base sauce tomate, mozzarella", "price": "7.50 €" },
+        { "order": 20, "name": "Végétarienne", "description": "Tomate, fromage, champignons, courgette, oignons, olives noires, artichaut", "price": "8.00 €" },
+        { "order": 30, "name": "Fromage", "description": "Base et fêta", "price": "8.00 €" },
+        { "order": 40, "name": "Thon", "description": "Thon, olives noires, oignons", "price": "8.30 €" },
+        { "order": 50, "name": "Allemande", "description": "Jambon de dinde, champignons, olives noires", "price": "8.70 €" },
+        { "order": 60, "name": "Somer", "description": "1 viande de kebab au choix, oignons", "price": "9.00 €" },
+        { "order": 70, "name": "Fruits de mer", "description": "Cocktail de fruits de mer", "price": "9.00 €" },
+        { "order": 80, "name": "Chef", "description": "Merguez, köfte, olives noires, oignons, poivrons verts, pommes de terre", "price": "10.00 €" },
+        { "order": 90, "name": "Turque", "description": "Suçuk, poivrons, olives noires, oignons", "price": "9.30 €" },
+        { "order": 100, "name": "Tunisienne", "description": "Merguez, poivrons, olives noires, oignons", "price": "9.30 €" },
+        { "order": 110, "name": "Italienne", "description": "Köfte, poivrons, olives noires, oignons", "price": "9.80 €" },
+        { "order": 120, "name": "Mexicaine", "description": "Brochettes de poulet, maïs, poivrons, olives noires", "price": "10.30 €" },
+        { "order": 130, "name": "Scandinave", "description": "Saumon, pommes de terre, oignons, olives noires", "price": "10.00 €" },
+        { "order": 140, "name": "Indienne", "description": "Brochettes de poulet, curry, oignons, olives noires, pommes de terre", "price": "10.00 €" },
+        { "order": 150, "name": "Cannibale", "description": "Jambon de dinde, suçuk, köfte, merguez, olives noires, oignons", "price": "10.50 €" },
+        { "order": 160, "name": "Morfale", "description": "Köfte, merguez, champignons, olives noires, oignons, viande de kebab poulet", "price": "10.80 €" },
+        { "order": 170, "name": "Extrême", "description": "Suçuk, köfte, jambon de dinde, viande de kebab poulet, poivrons, olives noires, champignons", "price": "11.00 €" },
+        { "order": 180, "name": "Figue & chèvre", "description": "Fromage de chèvre, oignons frits, confiture de figue", "price": "10.50 €" },
+        { "order": 190, "name": "Chèvre miel", "description": "Chèvre, olives noires, miel", "price": "10.00 €" },
+        { "order": 200, "name": "Lardons", "description": "Lardons de dinde, köfte, olives noires, champignons, oignons émincés", "price": "10.00 €" },
+        { "order": 210, "name": "Poulet barbecue", "description": "Base crème fraîche, brochettes de poulet, poivron rouge, maïs, sauce barbecue", "price": "10.00 €" },
+        { "order": 220, "name": "Viande hachée barbecue", "description": "Base crème fraîche, köfte, poivron rouge, maïs, sauce barbecue", "price": "10.00 €" },
+        { "order": 230, "name": "Viande hachée burger", "description": "Köfte, tomates, oignons, cornichon, sauce burger", "price": "10.00 €" },
+        { "order": 240, "name": "Poulet burger", "description": "Brochettes de poulet, tomates, oignons, cornichon, sauce burger", "price": "10.00 €" },
+        { "order": 250, "name": "Américaine", "description": "Köfte, brochettes de poulet, suçuk, oignons, poivrons rouges, olives noires, ketchup, mayonnaise", "price": "10.50 €" }
+      ]
+    },
+    {
+      "title": "Pides",
+      "badges": ["Accompagné de crudités, frites ou boulgour", "Pâte faite maison"],
+      "items": [
+        { "order": 10, "name": "Fêta", "price": "10.00 €" },
+        { "order": 20, "name": "Turc (suçuk)", "price": "10.00 €" },
+        { "order": 30, "name": "Viande hachée", "price": "10.00 €" },
+        { "order": 40, "name": "Épinards", "price": "10.00 €" }
+      ]
+    },
+    {
+      "title": "Tartes flambées",
+      "badges": ["Base crème fraîche"],
+      "items": [
+        {
+          "order": 10,
+          "name": "Forestière",
+          "description": "Lardons de dinde, champignons, oignons émincés, gruyère",
+          "price": "8.00 €"
+        },
+        {
+          "order": 20,
+          "name": "Turque",
+          "description": "Suçuk, champignons, oignons émincés, gruyère",
+          "price": "8.00 €"
+        },
+        {
+          "order": 30,
+          "name": "Italienne",
+          "description": "Köfte, champignons, oignons émincés, gruyère",
+          "price": "8.00 €"
+        }
+      ]
     }
+  ]
+},
+{
+  "id": "softs_alcools",
+  "label": "Softs & Alcools",
+  "showOfferMenu": false,
+  "sections": [
+    {
+      "title": "Softs",
+      "badges": ["33 cL 1.50 €", "50 cL 2.00 €"],
+      "items": [
+        {
+          "order": 10,
+          "name": "Sodas",
+          "description": "Coca, Fanta, Sprite, Oasis",
+          "price": ""
+        },
+        { "order": 20, "name": "Expresso", "price": "1.50 €" },
+        { "order": 30, "name": "Café long", "price": "2.00 €" },
+        { "order": 40, "name": "Bouteille 1.25 L", "price": "3.50 €" },
+        { "order": 50, "name": "Bouteille 2 L", "price": "4.00 €" }
+      ]
+    },
+    {
+      "title": "Alcools",
+      "badges": ["Vin au choix : rouge, rosé ou blanc"],
+      "items": [
+        { "order": 10, "name": "Panaché", "price": "2.50 €" },
+        { "order": 20, "name": "Picon", "price": "3.00 €" },
+        { "order": 30, "name": "Apéritif", "price": "4.00 €" },
+        { "order": 40, "name": "Whisky 4 cL", "price": "4.00 €" },
+        { "order": 50, "name": "Vin – le verre", "price": "2.00 €" },
+        { "order": 60, "name": "Vin – 1/4", "price": "4.00 €" },
+        { "order": 70, "name": "Vin – 1/2", "price": "8.00 €" },
+        { "order": 80, "name": "Vin – la bouteille", "price": "14.00 €" }
+      ]
+    }
+  ]
+}
   ]
 }

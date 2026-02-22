@@ -29,7 +29,6 @@ function Home() {
 
   return (
     <div className="min-h-[90dvh] bg-stone-950 text-stone-50">
-      {/* ✅ plus large sur desktop, moins “petit centré” */}
       <div className="mx-auto w-full max-w-6xl px-5 pb-10 pt-5 md:px-10 md:pb-14 md:pt-8">
         <header
           className="
@@ -41,9 +40,7 @@ function Home() {
             flex items-center justify-center
           "
         >
-          {/* ✅ centre vertical parfait */}
           <div className="relative z-10 flex w-full flex-col items-center justify-center text-center">
-            {/* ✅ LOGO plus grand */}
             <img
               src={logo}
               alt="Somer Grill"
@@ -60,10 +57,9 @@ function Home() {
             </h1>
 
             <p className="mt-4 max-w-2xl text-base md:text-lg text-stone-300/90">
-              Grill • Doner • Sandwich 
+              Grill • Doner • Sandwich
             </p>
 
-            {/* CTA vertical */}
             <div className="mt-10 flex flex-col items-center gap-5">
               <Button
                 asChild
@@ -90,16 +86,15 @@ function Home() {
               </a>
             </div>
 
-            
-
             {/* Collapsibles */}
-            <section className="mt-8 w-full max-w-2xl grid gap-6">
+            <section className="mt-8 w-full max-w-2xl grid gap-4">
               <Collapsible open={openContact} onOpenChange={setOpenContact}>
                 <CollapsibleTrigger
                   className="
                     group flex w-full items-center justify-between
                     rounded-2xl border border-stone-800/60 bg-stone-900/20
-                    px-5 py-5 text-left shadow-sm backdrop-blur-xl
+                    px-4 py-3 md:px-5 md:py-5
+                    text-left shadow-sm backdrop-blur-xl
                   "
                 >
                   <div>
@@ -114,7 +109,8 @@ function Home() {
                 <CollapsibleContent
                   className="
                     mt-2 rounded-2xl border border-stone-800/60 bg-stone-900/10
-                    px-5 py-5 backdrop-blur-xl
+                    px-4 py-4 md:px-5 md:py-5
+                    backdrop-blur-xl
                   "
                 >
                   <div className="space-y-4 text-base">
@@ -148,7 +144,8 @@ function Home() {
                   className="
                     group flex w-full items-center justify-between
                     rounded-2xl border border-stone-800/60 bg-stone-900/20
-                    px-5 py-5 text-left shadow-sm backdrop-blur-xl
+                    px-4 py-3 md:px-5 md:py-5
+                    text-left shadow-sm backdrop-blur-xl
                   "
                 >
                   <div>
@@ -163,11 +160,11 @@ function Home() {
                 <CollapsibleContent
                   className="
                     mt-2 rounded-2xl border border-stone-800/60 bg-stone-900/10
-                    px-5 py-5 backdrop-blur-xl
+                    px-4 py-4 md:px-5 md:py-5
+                    backdrop-blur-xl
                   "
                 >
                   <ul className="space-y-3 text-base">
-                    
                     <li className="flex justify-between gap-4">
                       <span className="text-stone-200">Lundi</span>
                       <span className="text-stone-300">FERMÉ</span>
@@ -206,7 +203,6 @@ function Home() {
             </section>
           </div>
 
-          {/* glow subtil premium */}
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,237,213,0.06),transparent_60%)]" />
         </header>
       </div>
