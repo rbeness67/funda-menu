@@ -5,7 +5,7 @@
    ========================= */
 
 .offerCard {
-  grid-column: 1 / -1; /* full width */
+  grid-column: 1 / -1;
   border-radius: 1.25rem;
   overflow: hidden;
 
@@ -23,62 +23,80 @@
 }
 
 .offerContent {
-  padding: 0.85rem 1rem 0.95rem;
+  /* ⬇️ less height */
+  padding: 0.75rem 0.95rem 0.8rem;
   display: grid;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
+
+/* =========================
+   Top hierarchy (tighter)
+   ========================= */
 
 .offerTop {
   text-align: center;
+  display: grid;
+  gap: 0.25rem;
 }
 
 .offerEyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: rgba(254, 243, 199, 0.9);
 }
 
+.offerPriceRow {
+  display: grid;
+  gap: 0.2rem;
+}
+
 .offerPrice {
-  margin-top: 0.25rem;
-  font-weight: 900;
+  font-weight: 950;
   letter-spacing: 0.06em;
-  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
   color: rgba(250, 250, 249, 0.98);
 }
 
-.offerPriceNote {
-  display: block;
-  margin-top: 0.25rem;
-  font-size: 0.9rem;
-  font-weight: 650;
+.offerInclude {
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.02em;
   color: rgba(231, 229, 228, 0.9);
 }
 
+/* =========================
+   Grid
+   ========================= */
+
 .offerGrid {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.7rem;
 }
 
 @media (min-width: 768px) {
   .offerGrid {
     grid-template-columns: 1fr 1fr;
     align-items: start;
+    gap: 0.9rem;
   }
 }
 
 .offerBlock {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .offerLabel {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(254, 243, 199, 0.85);
 }
+
+/* =========================
+   Lists
+   ========================= */
 
 .offerList {
   list-style: none;
@@ -86,7 +104,7 @@
   padding: 0;
 
   columns: 2;
-  column-gap: 0.6rem;
+  column-gap: 0.55rem;
 
   color: rgba(250, 250, 249, 0.9);
 }
@@ -102,50 +120,81 @@
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
 
-  padding: 0.38rem 0.55rem;
-  margin-bottom: 0.45rem;
+  /* slightly smaller */
+  padding: 0.32rem 0.5rem;
+  margin-bottom: 0.35rem;
 
   border-radius: 0.85rem;
   background: rgba(12, 10, 9, 0.32);
   border: 1px solid rgba(120, 113, 108, 0.2);
-  font-size: 0.84rem;
-}
-
-.offerFooter {
-  text-align: center;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(254, 243, 199, 0.75);
-}
-
-.offerMeta {
-}
-
-.offerSupplements {
-  margin-top: 0.25rem;
-}
-
-.offerSuppLabel {
-  margin-right: 0.4rem;
-}
-
-.offerSuppText {
+  font-size: 0.82rem;
 }
 
 /* =========================
-   Mobile collapsible UI
+   Footer (cleaner)
+   ========================= */
+
+.offerFooter {
+  text-align: center;
+  display: grid;
+  gap: 0.45rem;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(254, 243, 199, 0.78);
+}
+
+.offerMetaRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.offerMetaChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.22rem 0.5rem;
+  border-radius: 999px;
+
+  background: rgba(12, 10, 9, 0.32);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+
+  color: rgba(254, 243, 199, 0.88);
+}
+
+.offerSupplements {
+  line-height: 1.2;
+}
+
+.offerSuppLabel {
+  margin-right: 0.35rem;
+  color: rgba(254, 243, 199, 0.85);
+}
+
+.offerSuppText {
+  color: rgba(231, 229, 228, 0.9);
+  text-transform: none; /* ⬅️ easier to read */
+  letter-spacing: 0.03em;
+}
+
+/* =========================
+   Mobile collapsible UI (MORE COMPACT)
    ========================= */
 
 .collapseTrigger {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr auto auto;
-  gap: 0.6rem;
+  gap: 0.45rem;
   align-items: center;
 
-  padding: 0.6rem 0.75rem;
-  border-radius: 1rem;
+  /* ⬇️ much smaller when closed */
+  padding: 0.42rem 0.6rem;
+  border-radius: 0.95rem;
 
   background: rgba(12, 10, 9, 0.38);
   border: 1px solid rgba(245, 158, 11, 0.16);
@@ -155,7 +204,7 @@
 }
 
 .collapseTitle {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 900;
@@ -163,9 +212,9 @@
 }
 
 .collapseHint {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   letter-spacing: 0.02em;
-  font-weight: 650;
+  font-weight: 700;
   color: rgba(231, 229, 228, 0.9);
   white-space: nowrap;
 }
@@ -181,5 +230,5 @@
 }
 
 .collapseContent {
-  padding-top: 0.5rem;
+  padding-top: 0.45rem;
 }

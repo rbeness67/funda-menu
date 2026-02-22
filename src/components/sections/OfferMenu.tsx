@@ -1,3 +1,4 @@
+// OfferMenu.tsx
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "../ui/card";
 import {
@@ -69,17 +70,17 @@ export function OfferMenuCard() {
   return (
     <Card className={styles.offerCard} aria-label="Offre menu">
       <CardContent className={styles.offerContent}>
+        {/* TOP: tighter + clearer hierarchy */}
         <div className={styles.offerTop}>
           <div className={styles.offerEyebrow}>Offre menu</div>
 
-          <div className={styles.offerPrice}>
-            +4,00 €
-            <span className={styles.offerPriceNote}>
-              inclut frites + boisson 33 cL
-            </span>
+          <div className={styles.offerPriceRow}>
+            <div className={styles.offerPrice}>+4,00 €</div>
+            <div className={styles.offerInclude}>Frites + boisson 33 cL</div>
           </div>
         </div>
 
+        {/* MAIN: collapsibles compact on mobile */}
         <div className={styles.offerGrid}>
           <div className={styles.offerBlock}>
             {isMobile ? (
@@ -88,7 +89,7 @@ export function OfferMenuCard() {
                   <button type="button" className={styles.collapseTrigger}>
                     <span className={styles.collapseTitle}>Crudités</span>
                     <span className={styles.collapseHint}>
-                      {openCrudites ? "Tap pour fermer" : "Tap pour afficher"}
+                      {openCrudites ? "Fermer" : "Afficher"}
                     </span>
                     <span
                       className={`${styles.chevron} ${
@@ -132,7 +133,7 @@ export function OfferMenuCard() {
                   <button type="button" className={styles.collapseTrigger}>
                     <span className={styles.collapseTitle}>Sauces</span>
                     <span className={styles.collapseHint}>
-                      {openSauces ? "Tap pour fermer" : "Tap pour afficher"}
+                      {openSauces ? "Fermer" : "Afficher"}
                     </span>
                     <span
                       className={`${styles.chevron} ${
@@ -170,10 +171,15 @@ export function OfferMenuCard() {
           </div>
         </div>
 
+        {/* FOOTER: better hierarchy, less visual noise */}
         <div className={styles.offerFooter}>
-          <div className={styles.offerMeta}>
-            Viande <strong>Halal</strong> · Barquette frites{" "}
-            <strong>3 €</strong>
+          <div className={styles.offerMetaRow}>
+            <span className={styles.offerMetaChip}>
+              Viande <strong>Halal</strong>
+            </span>
+            <span className={styles.offerMetaChip}>
+              Barquette frites <strong>3 €</strong>
+            </span>
           </div>
 
           <div className={styles.offerSupplements}>
