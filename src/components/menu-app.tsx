@@ -7,7 +7,7 @@ import styles from "./menu-app.module.css";
 import logo from "@/assets/logo.png";
 
 import { DonerTab } from "./sections/doner-tab";
-import { SandwichTacosTab } from "./sections/sandwich-tab";
+import SandwichTacosTab from "./sections/sandwich-tab";
 import { DefaultTab } from "./sections/default-tab";
 
 type Category = { id: string; label: string };

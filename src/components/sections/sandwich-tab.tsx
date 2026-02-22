@@ -1,4 +1,6 @@
+// src/components/sections/sandwich-tab.tsx
 import { Card, CardContent, CardHeader } from "../ui/card";
+import { OfferMenuCard } from "./OfferMenu";
 import styles from "./sandwich-tab.module.css";
 
 type MenuItem = {
@@ -116,136 +118,39 @@ function MenuList({ items }: { items: MenuItem[] }) {
   );
 }
 
-function OfferMenuCard() {
-  const crudites = [
-    "Salade",
-    "Tomate",
-    "Oignon",
-    "Carotte",
-    "Choux rouge",
-    "Olive verte",
-    "Olive noire",
-    "Maïs",
-    "Cornichon",
-    "Piment vert doux",
-    "Piment vert grillé",
-    "Oignon grillé",
-  ];
-
-  const sauces = [
-    "Blanche",
-    "Rouge",
-    "Ketchup",
-    "Mayonnaise",
-    "Samouraï",
-    "Algérienne",
-    "Andalouse",
-    "Tartare",
-    "Brésilienne",
-    "Curry",
-    "Moutarde",
-    "Harissa",
-    "Barbecue",
-    "Piment en poudre",
-    "Sauce fromagère",
-  ];
-
-  return (
-    <Card className={styles.offerCard} aria-label="Offre menu">
-      <CardContent className={styles.offerContent}>
-        <div className={styles.offerTop}>
-          <div className={styles.offerEyebrow}>Offre menu</div>
-
-          <div className={styles.offerPrice}>
-            +4,00 €
-            <span className={styles.offerPriceNote}>
-              inclut frites + boisson 33 cL
-            </span>
-          </div>
-        </div>
-
-        <div className={styles.offerGrid}>
-          <div className={styles.offerBlock}>
-            <div className={styles.offerLabel}>Règles par sandwich</div>
-            <div className={styles.offerPills}>
-              <span className={styles.offerPill}>5 crudités max</span>
-              <span className={styles.offerPill}>3 sauces max</span>
-            </div>
-          </div>
-
-          <div className={styles.offerBlock}>
-            <div className={styles.offerLabel}>Crudités</div>
-            <ul className={styles.offerList}>
-              {crudites.map((c) => (
-                <li key={c} className={styles.offerListItem}>
-                  {c}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={styles.offerBlock}>
-            <div className={styles.offerLabel}>Sauces</div>
-            <ul className={styles.offerList}>
-              {sauces.map((s) => (
-                <li key={s} className={styles.offerListItem}>
-                  {s}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className={styles.offerFooter}>Premium • clair • rapide</div>
-      </CardContent>
-    </Card>
-  );
-}
-
 export function SandwichTacosTab({ label }: SandwichTacosTabProps) {
-  const tacosSorted = [...TACOS_ITEMS].sort((a, b) => a.order - b.order);
-  const burgersSorted = [...BURGER_ITEMS].sort((a, b) => a.order - b.order);
-  const sandwichesSorted = [...SANDWICH_ITEMS].sort(
-    (a, b) => a.order - b.order
-  );
-
   return (
-  <div className={styles.grid}>
-    {/* Optional page title from parent category */}
-    <h1 className={styles.pageTitle}>{label}</h1>
+    <div className={styles.grid} aria-label={label}>
+      <OfferMenuCard />
 
-    {/* ✅ Offre menu AU-DESSUS */}
-    <OfferMenuCard />
+      <Card className={styles.menuCard} aria-label="Tacos">
+        <CardHeader className={styles.menuHeader}>
+          <div className={styles.categoryTitle}>Tacos</div>
+        </CardHeader>
+        <CardContent className={styles.menuContent}>
+          <MenuList items={TACOS_ITEMS} />
+        </CardContent>
+      </Card>
 
-    {/* TACOS */}
-    <Card className={`${styles.menuCard} ${styles.tacosCard}`}>
-      <CardHeader className={styles.menuHeader}>
-        <h2 className={styles.categoryTitle}>Tacos</h2>
-      </CardHeader>
-      <CardContent className={styles.menuContent}>
-        <MenuList items={tacosSorted} />
-      </CardContent>
-    </Card>
+      <Card className={styles.menuCard} aria-label="Burgers">
+        <CardHeader className={styles.menuHeader}>
+          <div className={styles.categoryTitle}>Burgers</div>
+        </CardHeader>
+        <CardContent className={styles.menuContent}>
+          <MenuList items={BURGER_ITEMS} />
+        </CardContent>
+      </Card>
 
-    {/* BURGERS */}
-    <Card className={`${styles.menuCard} ${styles.burgersCard}`}>
-      <CardHeader className={styles.menuHeader}>
-        <h2 className={styles.categoryTitle}>Burgers</h2>
-      </CardHeader>
-      <CardContent className={styles.menuContent}>
-        <MenuList items={burgersSorted} />
-      </CardContent>
-    </Card>
-
-    {/* SANDWICHES */}
-    <Card className={`${styles.menuCard} ${styles.sandwichesCard}`}>
-      <CardHeader className={styles.menuHeader}>
-        <h2 className={styles.categoryTitle}>Sandwiches</h2>
-      </CardHeader>
-      <CardContent className={styles.menuContent}>
-        <MenuList items={sandwichesSorted} />
-      </CardContent>
-    </Card>
-  </div>
-);
+      <Card className={styles.menuCard} aria-label="Sandwiches">
+        <CardHeader className={styles.menuHeader}>
+          <div className={styles.categoryTitle}>Sandwiches</div>
+        </CardHeader>
+        <CardContent className={styles.menuContent}>
+          <MenuList items={SANDWICH_ITEMS} />
+        </CardContent>
+      </Card>
+    </div>
+  );
 }
+
+export default SandwichTacosTab;
