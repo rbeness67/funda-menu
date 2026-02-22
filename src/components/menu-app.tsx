@@ -6,36 +6,37 @@ import styles from "./menu-app.module.css";
 
 import logo from "@/assets/logo.png";
 
-import { DonerTab } from "./sections/doner-tab";
-import SandwichTacosTab from "./sections/sandwich-tab";
-import { DefaultTab } from "./sections/default-tab";
-
-type Category = { id: string; label: string };
-
+import CategoryTab from "./sections/category-tab";
+import type { CategoryConfig } from "./sections/category-tab";
 export function MenuApp() {
-  const categories = data.categories as Category[];
+  const categories = data.categories as CategoryConfig[];
   const [active, setActive] = useState(categories[0]?.id ?? "");
 
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        {/* ✅ Sticky header (logo + retour) */}
         <div className={styles.brandSticky}>
           <div className={styles.brandBar}>
             <div className={styles.brandCenter}>
-              <img src={logo} alt={data.restaurantName} className={styles.logo} />
+              <img
+                src={logo}
+                alt={data.restaurantName}
+                className={styles.logo}
+              />
               <div className={styles.brandTitle}>{data.restaurantName}</div>
             </div>
 
-            {/* ✅ Bouton retour accueil (en haut à droite) */}
-            <Link to="/" className={styles.homeBtn} aria-label="Retour à l'accueil">
+            <Link
+              to="/"
+              className={styles.homeBtn}
+              aria-label="Retour à l'accueil"
+            >
               Accueil
             </Link>
           </div>
         </div>
 
         <Tabs value={active} onValueChange={setActive}>
-          {/* ✅ Tabbar sticky (en dessous du logo sticky) */}
           <div className={styles.tabbarSticky}>
             <TabsList className={styles.tabbar}>
               {categories.map((cat) => (
@@ -56,13 +57,7 @@ export function MenuApp() {
               value={cat.id}
               className={styles.tabContent}
             >
-              {cat.id === "doner" && <DonerTab label={cat.label} />}
-              {cat.id === "sandwich_tacos" && (
-                <SandwichTacosTab label={cat.label} />
-              )}
-              {cat.id === "bowls_assiettes" && <DefaultTab label={cat.label} />}
-              {cat.id === "pizza_pide" && <DefaultTab label={cat.label} />}
-              {cat.id === "boissons" && <DefaultTab label={cat.label} />}
+              <CategoryTab category={cat} />
             </TabsContent>
           ))}
         </Tabs>

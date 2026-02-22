@@ -28,7 +28,7 @@ function Home() {
   const [openHours, setOpenHours] = useState(false);
 
   return (
-    <div className="min-h-[100dvh] bg-stone-950 text-stone-50">
+    <div className="min-h-[90dvh] bg-stone-950 text-stone-50">
       {/* ✅ plus large sur desktop, moins “petit centré” */}
       <div className="mx-auto w-full max-w-6xl px-5 pb-10 pt-5 md:px-10 md:pb-14 md:pt-8">
         <header
