@@ -6,18 +6,7 @@
       "label": "Döner & Yufka",
       "showOfferMenu": true,
       "sections": [
-        {
-          "title": "Box",
-          "badges": ["5 crudités max", "3 sauces max"],
-          "items": [
-            {
-              "order": 10,
-              "name": "Box",
-              "description": "Viande de kebab au choix • 5 crudités max • 3 sauces max • Crudités & frites",
-              "price": "7.50 €"
-            }
-          ]
-        },
+        
         {
           "title": "Döner",
           "badges": ["5 crudités max", "3 sauces max"],
@@ -70,6 +59,18 @@
             { "order": 60, "name": "Yufka crudités", "price": "7.50 €" },
             { "order": 70, "name": "Yufka falafel", "price": "6.50 €" },
             { "order": 80, "name": "Yufka galette de pommes de terre", "price": "6.50 €" }
+          ]
+        },
+        {
+          "title": "Box",
+          "badges": ["5 crudités max", "3 sauces max"],
+          "items": [
+            {
+              "order": 10,
+              "name": "Box",
+              "description": "Viande de kebab au choix • 5 crudités max • 3 sauces max • Crudités & frites",
+              "price": "7.50 €"
+            }
           ]
         }
       ]
@@ -285,7 +286,7 @@
     },
     {
       "title": "Pides",
-      "badges": ["Accompagné de crudités, frites ou boulgour", "Pâte faite maison"],
+      "badges": ["Accompagné de crudités ou frites ou boulgour", "Pâte faite maison"],
       "items": [
         { "order": 10, "name": "Fêta", "price": "10.00 €" },
         { "order": 20, "name": "Turc (suçuk)", "price": "10.00 €" },
@@ -321,7 +322,7 @@
 },
 {
   "id": "softs_alcools",
-  "label": "Softs & Alcools",
+  "label": "Boissons & Desserts",
   "showOfferMenu": false,
   "sections": [
     {
@@ -352,6 +353,13 @@
         { "order": 60, "name": "Vin – 1/4", "price": "4.00 €" },
         { "order": 70, "name": "Vin – 1/2", "price": "8.00 €" },
         { "order": 80, "name": "Vin – la bouteille", "price": "14.00 €" }
+      ]
+    },
+    {
+      "title": "Desserts",
+      "items": [
+        { "order": 10, "name": "Muffin", "price": "2.50 €" },
+        { "order": 20, "name": "Donut", "price": "3.50 €" }
       ]
     }
   ]

@@ -185,7 +185,7 @@
   color: rgba(214, 211, 209, 0.9);
 
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

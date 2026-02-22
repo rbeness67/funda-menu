@@ -21,6 +21,7 @@ export function OfferMenuCard() {
     "Piment vert doux",
     "Piment vert grillé",
     "Oignon grillé",
+    "Oignon frit"
   ];
 
   const sauces = [

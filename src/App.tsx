@@ -59,6 +59,9 @@ function Home() {
             <p className="mt-4 max-w-2xl text-base md:text-lg text-stone-300/90">
               Grill • Doner • Sandwich
             </p>
+            <p className="mt-4 max-w-2xl text-base md:text-lg text-stone-300/90">
+              Viande Certifiée Halal
+            </p>
 
             <div className="mt-10 flex flex-col items-center gap-5">
               <Button
