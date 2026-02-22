@@ -276,7 +276,20 @@ function OfferMenuCard() {
           </div>
         </div>
 
-        <div className={styles.offerFooter}>Premium • clair • rapide</div>
+        <div className={styles.offerFooter}>
+          <div className={styles.offerMeta}>
+            Viande <strong>Halal</strong> · Barquette frites{" "}
+            <strong>3 €</strong>
+          </div>
+
+          <div className={styles.offerSupplements}>
+            <span className={styles.offerSuppLabel}>Suppléments</span>
+            <span className={styles.offerSuppText}>
+              1 viande <strong>1,50 €</strong> · Frites · Fêta · Cheddar · Kiri{" "}
+              <strong>1 €</strong>
+            </span>
+          </div>
+        </div>
       </CardContent>
     </Card>
   );
