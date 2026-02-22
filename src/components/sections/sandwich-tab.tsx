@@ -210,42 +210,42 @@ export function SandwichTacosTab({ label }: SandwichTacosTabProps) {
   );
 
   return (
-    <div className={styles.grid}>
-      {/* Optional page title from parent category */}
-      <h1 className={styles.pageTitle}>{label}</h1>
+  <div className={styles.grid}>
+    {/* Optional page title from parent category */}
+    <h1 className={styles.pageTitle}>{label}</h1>
 
-      {/* TACOS */}
-      <Card className={`${styles.menuCard} ${styles.tacosCard}`}>
-        <CardHeader className={styles.menuHeader}>
-          <h2 className={styles.categoryTitle}>Tacos</h2>
-        </CardHeader>
-        <CardContent className={styles.menuContent}>
-          <MenuList items={tacosSorted} />
-        </CardContent>
-      </Card>
+    {/* ✅ Offre menu AU-DESSUS */}
+    <OfferMenuCard />
 
-      {/* BURGERS */}
-      <Card className={`${styles.menuCard} ${styles.burgersCard}`}>
-        <CardHeader className={styles.menuHeader}>
-          <h2 className={styles.categoryTitle}>Burgers</h2>
-        </CardHeader>
-        <CardContent className={styles.menuContent}>
-          <MenuList items={burgersSorted} />
-        </CardContent>
-      </Card>
+    {/* TACOS */}
+    <Card className={`${styles.menuCard} ${styles.tacosCard}`}>
+      <CardHeader className={styles.menuHeader}>
+        <h2 className={styles.categoryTitle}>Tacos</h2>
+      </CardHeader>
+      <CardContent className={styles.menuContent}>
+        <MenuList items={tacosSorted} />
+      </CardContent>
+    </Card>
 
-      {/* SANDWICHES */}
-      <Card className={`${styles.menuCard} ${styles.sandwichesCard}`}>
-        <CardHeader className={styles.menuHeader}>
-          <h2 className={styles.categoryTitle}>Sandwiches</h2>
-        </CardHeader>
-        <CardContent className={styles.menuContent}>
-          <MenuList items={sandwichesSorted} />
-        </CardContent>
-      </Card>
+    {/* BURGERS */}
+    <Card className={`${styles.menuCard} ${styles.burgersCard}`}>
+      <CardHeader className={styles.menuHeader}>
+        <h2 className={styles.categoryTitle}>Burgers</h2>
+      </CardHeader>
+      <CardContent className={styles.menuContent}>
+        <MenuList items={burgersSorted} />
+      </CardContent>
+    </Card>
 
-      {/* Offre menu en dessous */}
-      <OfferMenuCard />
-    </div>
-  );
+    {/* SANDWICHES */}
+    <Card className={`${styles.menuCard} ${styles.sandwichesCard}`}>
+      <CardHeader className={styles.menuHeader}>
+        <h2 className={styles.categoryTitle}>Sandwiches</h2>
+      </CardHeader>
+      <CardContent className={styles.menuContent}>
+        <MenuList items={sandwichesSorted} />
+      </CardContent>
+    </Card>
+  </div>
+);
 }

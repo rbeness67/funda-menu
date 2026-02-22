@@ -5,15 +5,33 @@
 .grid {
   display: grid;
   gap: 1rem;
+  align-items: start;
+
+  /* ✅ dynamique : remplit l'espace avec des colonnes flexibles */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-/* Desktop: 2 colonnes pour les 2 cards menu */
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   }
 }
+
+/* Si tu as un titre optionnel dans le JSX */
+.pageTitle {
+  grid-column: 1 / -1; /* full width */
+  margin: 0.25rem 0 0.25rem;
+
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  text-align: center;
+
+  color: rgba(250, 250, 249, 0.96);
+}
+
 /* =========================
    Cards (premium glass)
    ========================= */
@@ -110,7 +128,7 @@
 }
 
 /* =========================
-   Doner badge
+   Doner badge (safe to keep)
    ========================= */
 
 .donerBadge {
@@ -140,6 +158,10 @@
   transform: rotate(1deg);
 }
 
+/* =========================
+   Category title
+   ========================= */
+
 .categoryTitle {
   position: relative;
   text-align: center;
@@ -150,8 +172,6 @@
   font-size: clamp(0.95rem, 1.4vw, 1.15rem);
 
   color: rgba(250, 250, 249, 0.96); /* stone-50 */
-
-  /* same DNA as SOMER GRILL */
 }
 
 /* subtle luxury accent */
@@ -169,8 +189,13 @@
     transparent
   );
 }
+
+/* =========================
+   Offer card (full width, on top)
+   ========================= */
+
 .offerCard {
-  grid-column: 1 / -1; /* full width under the 2 cards */
+  grid-column: 1 / -1; /* full width */
   border-radius: 1.25rem;
   overflow: hidden;
 
@@ -181,16 +206,16 @@
 
   border: 1px solid rgba(245, 158, 11, 0.22);
   box-shadow:
-    0 18px 55px rgba(0, 0, 0, 0.45),
+    0 22px 70px rgba(0, 0, 0, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
   backdrop-filter: blur(12px);
 }
 
 .offerContent {
-  padding: 0.85rem 1rem 0.95rem; /* moins de padding */
+  padding: 0.85rem 1rem 0.95rem;
   display: grid;
-  gap: 0.75rem; /* moins d'espace */
+  gap: 0.75rem;
 }
 
 .offerTop {
@@ -208,7 +233,8 @@
   margin-top: 0.25rem;
   font-weight: 900;
   letter-spacing: 0.06em;
-  font-size: clamp(1.15rem, 1.6vw, 1.45rem); /* plus petit */
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  color: rgba(250, 250, 249, 0.98);
 }
 
 .offerPriceNote {
@@ -267,33 +293,30 @@
   margin: 0;
   padding: 0;
 
-  /* colonnes */
   columns: 2;
   column-gap: 0.6rem;
 
-  /* spacing */
   color: rgba(250, 250, 249, 0.9);
 }
 
 @media (min-width: 768px) {
   .offerList {
-    columns: 3; /* encore plus compact sur desktop */
+    columns: 3;
     column-gap: 0.75rem;
   }
 }
 
-/* each item must not break across columns */
 .offerListItem {
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
 
-  padding: 0.38rem 0.55rem; /* plus petit */
+  padding: 0.38rem 0.55rem;
   margin-bottom: 0.45rem;
 
   border-radius: 0.85rem;
   background: rgba(12, 10, 9, 0.32);
-  border: 1px solid rgba(120, 113, 108, 0.20);
-  font-size: 0.84rem; /* plus petit */
+  border: 1px solid rgba(120, 113, 108, 0.2);
+  font-size: 0.84rem;
 }
 
 .offerFooter {
