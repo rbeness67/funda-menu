@@ -1,4 +1,3 @@
-// OfferMenu.tsx
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "../ui/card";
 import {
@@ -70,7 +69,6 @@ export function OfferMenuCard() {
   return (
     <Card className={styles.offerCard} aria-label="Offre menu">
       <CardContent className={styles.offerContent}>
-        {/* TOP: tighter + clearer hierarchy */}
         <div className={styles.offerTop}>
           <div className={styles.offerEyebrow}>Offre menu</div>
 
@@ -80,7 +78,6 @@ export function OfferMenuCard() {
           </div>
         </div>
 
-        {/* MAIN: collapsibles compact on mobile */}
         <div className={styles.offerGrid}>
           <div className={styles.offerBlock}>
             {isMobile ? (
@@ -171,7 +168,6 @@ export function OfferMenuCard() {
           </div>
         </div>
 
-        {/* FOOTER: better hierarchy, less visual noise */}
         <div className={styles.offerFooter}>
           <div className={styles.offerMetaRow}>
             <span className={styles.offerMetaChip}>

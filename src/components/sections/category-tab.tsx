@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { OfferMenuCard } from "./OfferMenu";
+import { KidsMenuCard } from "./KidsMenu";
 import styles from "./category-tab.module.css";
 
 export type MenuItem = {
@@ -11,10 +12,7 @@ export type MenuItem = {
 
 export type MenuSection = {
   title: string;
-
-  /** NEW: badges displayed under the card title */
   badges?: string[];
-
   items: MenuItem[];
 };
 
@@ -46,13 +44,7 @@ function MenuList({ items }: { items: MenuItem[] }) {
   );
 }
 
-function SectionHeader({
-  title,
-  badges,
-}: {
-  title: string;
-  badges?: string[];
-}) {
+function SectionHeader({ title, badges }: { title: string; badges?: string[] }) {
   const hasBadges = Array.isArray(badges) && badges.length > 0;
 
   return (
@@ -75,7 +67,12 @@ function SectionHeader({
 export function CategoryTab({ category }: { category: CategoryConfig }) {
   return (
     <div className={styles.grid} aria-label={category.label}>
-      {category.showOfferMenu ? <OfferMenuCard /> : null}
+      {category.showOfferMenu ? (
+        <>
+          <OfferMenuCard />
+          <KidsMenuCard />
+        </>
+      ) : null}
 
       {category.sections.map((section) => (
         <Card
