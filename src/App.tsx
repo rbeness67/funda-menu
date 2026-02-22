@@ -70,7 +70,7 @@ function Home() {
                 size="lg"
                 className="
                   bg-stone-100 text-stone-950 hover:bg-stone-200
-                  rounded-full px-12 py-7
+                  rounded-full px-12 py-5
                   text-lg font-semibold
                 "
               >
@@ -105,9 +105,6 @@ function Home() {
                   <div>
                     <div className="text-xs uppercase tracking-widest text-stone-400">
                       Contacts
-                    </div>
-                    <div className="mt-1 text-base text-stone-300">
-                      Adresse & téléphone
                     </div>
                   </div>
 
@@ -158,9 +155,6 @@ function Home() {
                     <div className="text-xs uppercase tracking-widest text-stone-400">
                       Horaires
                     </div>
-                    <div className="mt-1 text-base text-stone-300">
-                      Ouvertures de la semaine
-                    </div>
                   </div>
 
                   <ChevronDown className="h-5 w-5 text-stone-300 transition-transform duration-200 group-data-[state=open]:rotate-180" />
@@ -173,17 +167,10 @@ function Home() {
                   "
                 >
                   <ul className="space-y-3 text-base">
-                    <li className="flex justify-between gap-4">
-                      <span className="text-stone-200">Samedi</span>
-                      <span className="text-stone-300">11:00 – 22:00</span>
-                    </li>
-                    <li className="flex justify-between gap-4">
-                      <span className="text-stone-200">Dimanche</span>
-                      <span className="text-stone-300">11:00 – 22:00</span>
-                    </li>
+                    
                     <li className="flex justify-between gap-4">
                       <span className="text-stone-200">Lundi</span>
-                      <span className="text-stone-300">09:00 – 22:00</span>
+                      <span className="text-stone-300">FERMÉ</span>
                     </li>
                     <li className="flex justify-between gap-4">
                       <span className="text-stone-200">Mardi</span>
@@ -199,6 +186,14 @@ function Home() {
                     </li>
                     <li className="flex justify-between gap-4">
                       <span className="text-stone-200">Vendredi</span>
+                      <span className="text-stone-300">11:00 – 22:00</span>
+                    </li>
+                    <li className="flex justify-between gap-4">
+                      <span className="text-stone-200">Samedi</span>
+                      <span className="text-stone-300">11:00 – 22:00</span>
+                    </li>
+                    <li className="flex justify-between gap-4">
+                      <span className="text-stone-200">Dimanche</span>
                       <span className="text-stone-300">11:00 – 22:00</span>
                     </li>
                   </ul>

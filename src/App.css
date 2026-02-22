@@ -1,11 +1,49 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* =========================
+   GLOBAL BACKGROUND (fix iOS/Android white bars)
+   ========================= */
+
+:root {
+  --app-bg: #0c0a09; /* stone-950 */
+  --font-body: "Metropolis", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-title-brush: "MixBrush", "Metropolis", sans-serif;
 }
 
-/* Demo / template leftovers (safe to keep) */
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  background-color: var(--app-bg);
+}
+
+/* évite le "bounce" qui révèle du blanc sur iOS */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* ✅ safe areas iPhone (haut/bas) */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  /* ✅ évite overscroll blanc sur navigateurs récents */
+  overscroll-behavior: none;
+}
+
+/* Le root ne doit pas limiter l'app (le style template causait l'effet "bloc centré") */
+#root {
+  min-height: 100dvh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: initial;
+  background-color: var(--app-bg);
+}
+
+/* =========================
+   Demo / template leftovers (safe to keep)
+   ========================= */
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -73,23 +111,3 @@
   font-display: swap;
 }
 */
-
-:root {
-  --font-body: "Metropolis", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-title-brush: "MixBrush", "Metropolis", sans-serif;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#root {
-  min-height: 100dvh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: initial;
-}

@@ -1,13 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>funda-menu</title>
+
+    <!-- ✅ Couleur "app" (Android Chrome, desktop) -->
+    <meta name="theme-color" content="#0c0a09" />
+
+    <!-- ✅ iOS Safari (status bar + rendu "app") -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- iOS 15+ Safari peut aussi lire theme-color, mais on garde les 2 -->
+
+    <!-- ✅ Hint UI pour navigateurs modernes -->
+    <meta name="color-scheme" content="dark" />
+
+    <title>Somer Grill</title>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Vite entry -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
