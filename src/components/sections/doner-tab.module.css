@@ -302,12 +302,49 @@
   font-size: 0.84rem; /* plus petit */
 }
 
+/* =========================
+   Offer footer (infos + suppléments)
+   ========================= */
+
 .offerFooter {
+  margin-top: 0.4rem;
+  padding-top: 0.6rem;
+
+  display: grid;
+  gap: 0.45rem;
+
   text-align: center;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
+}
+
+/* ligne principale */
+.offerMeta {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(254, 243, 199, 0.75);
+
+  color: rgba(254, 243, 199, 0.85); /* doré clair premium */
+}
+
+/* bloc suppléments */
+.offerSupplements {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.offerSuppLabel {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: rgba(254, 243, 199, 0.7);
+}
+
+.offerSuppText {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  color: rgba(250, 250, 249, 0.92);
 }
 
 /* =========================

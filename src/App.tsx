@@ -64,7 +64,7 @@ function Home() {
             </p>
 
             {/* CTA vertical */}
-            <div className="mt-16 flex flex-col items-center gap-5">
+            <div className="mt-10 flex flex-col items-center gap-5">
               <Button
                 asChild
                 size="lg"
