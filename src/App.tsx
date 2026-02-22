@@ -74,9 +74,7 @@ function Home() {
               </Button>
 
               <a
-                href="https://deliveroo.fr"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://deliveroo.fr/en/menu/strasbourg/cronenbourg/somer-grill"
                 className="
                   text-base text-stone-400 hover:text-stone-200
                   underline underline-offset-4 decoration-stone-600
@@ -84,6 +82,7 @@ function Home() {
               >
                 Commander sur Deliveroo
               </a>
+               
             </div>
 
             {/* Collapsibles */}
