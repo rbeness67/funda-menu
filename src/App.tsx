@@ -28,8 +28,8 @@ function Home() {
   const [openHours, setOpenHours] = useState(false);
 
   return (
-    <div className="min-h-[90dvh] bg-stone-950 text-stone-50">
-      <div className="mx-auto w-full max-w-6xl px-5 pb-10 pt-5 md:px-10 md:pb-14 md:pt-8">
+      <div className="min-h-[90dvh] md:min-h-[100dvh] bg-stone-950 text-stone-50">
+        <div className="mx-auto w-full max-w-6xl px-5 pb-10 pt-5 md:px-10 md:pb-14 md:pt-8">
         <header
           className="
             relative overflow-hidden rounded-3xl
@@ -99,7 +99,7 @@ function Home() {
                 >
                   <div>
                     <div className="text-xs uppercase tracking-widest text-stone-400">
-                      Contacts
+                      Adresse & Téléphone
                     </div>
                   </div>
 
@@ -150,7 +150,7 @@ function Home() {
                 >
                   <div>
                     <div className="text-xs uppercase tracking-widest text-stone-400">
-                      Horaires
+                      Horaires d'ouverture
                     </div>
                   </div>
 
