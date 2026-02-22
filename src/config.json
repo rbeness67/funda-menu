@@ -82,7 +82,7 @@
       "sections": [
         {
           "title": "Tacos",
-          "badges": ["5 crudités max", "3 sauces max"],
+          "badges": ["5 crudités max", "3 sauces max","Supplément gratiné au choix - Suçuk, Chèvre miel ou Lardons +1,50€"],
           "items": [
             { "order": 10, "name": "Tacos kebab poulet", "price": "8.00 €" },
             { "order": 20, "name": "Tacos kebab bœuf", "price": "8.00 €" },
@@ -258,11 +258,11 @@
       "badges": ["Viande halal", "Pâte faite maison", "Base tomate ou crème fraîche"],
       "items": [
         { "order": 10, "name": "Margherita", "description": "Base sauce tomate, mozzarella", "price": "7.50 €" },
-        { "order": 20, "name": "Végétarienne", "description": "Tomate, fromage, champignons, courgette, oignons, olives noires, artichaut", "price": "8.00 €" },
+        { "order": 20, "name": "Végétarienne", "description": "Tomate, poivrons verts, champignons, courgette, oignons, olives noires, artichaut", "price": "8.00 €" },
         { "order": 30, "name": "Fromage", "description": "Base et fêta", "price": "8.00 €" },
         { "order": 40, "name": "Thon", "description": "Thon, olives noires, oignons", "price": "8.30 €" },
         { "order": 50, "name": "Allemande", "description": "Jambon de dinde, champignons, olives noires", "price": "8.70 €" },
-        { "order": 60, "name": "Somer", "description": "1 viande de kebab au choix, oignons", "price": "9.00 €" },
+        { "order": 60, "name": "Somer", "description": "viande de kebab poulet, oignons", "price": "9.00 €" },
         { "order": 70, "name": "Fruits de mer", "description": "Cocktail de fruits de mer", "price": "9.00 €" },
         { "order": 80, "name": "Chef", "description": "Merguez, köfte, olives noires, oignons, poivrons verts, pommes de terre", "price": "10.00 €" },
         { "order": 90, "name": "Turque", "description": "Suçuk, poivrons, olives noires, oignons", "price": "9.30 €" },
