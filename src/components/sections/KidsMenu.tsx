@@ -16,6 +16,7 @@ export function KidsMenuCard() {
 
     const apply = () => {
       const mobile = mq.matches;
+      isMobile
       setIsMobile(mobile);
 
       // Desktop: open by default, Mobile: closed by default
