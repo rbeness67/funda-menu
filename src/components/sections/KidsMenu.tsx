@@ -52,7 +52,7 @@ export function KidsMenuCard() {
 
             <div className={styles.kidsText}>
               <div className={styles.kidsLine}>
-                Hamburger (45 g de viande) ou 5 nuggets
+                Hamburger (90 g de viande) ou 5 nuggets
               </div>
               <div className={styles.kidsLine}>Frites &amp; Capri-Sun</div>
             </div>
