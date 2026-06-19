@@ -58,7 +58,7 @@
             { "order": 50, "name": "Brochettes de poulet", "price": "8.50 €" },
             { "order": 60, "name": "Crudités", "price": "7.50 €" },
             { "order": 70, "name": "Falafel", "price": "6.50 €" },
-            { "order": 80, "name": "Galette de pommes de terre", "price": "6.50 €" },
+            { "order": 80, "name": "Galette de pommes de terre", "price": "6.50 €" }
           ]
         },
         {
