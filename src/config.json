@@ -48,17 +48,17 @@
           ]
         },
         {
-          "title": "Yufka",
+          "title": "Yufka & Lahmacun",
           "badges": ["5 crudités max", "3 sauces max"],
           "items": [
-            { "order": 10, "name": "Yufka poulet", "price": "8.00 €" },
-            { "order": 20, "name": "Yufka bœuf", "price": "8.00 €" },
-            { "order": 30, "name": "Yufka mixte", "price": "8.50 €" },
-            { "order": 40, "name": "Yufka köfte", "price": "8.50 €" },
-            { "order": 50, "name": "Yufka brochettes de poulet", "price": "8.50 €" },
-            { "order": 60, "name": "Yufka crudités", "price": "7.50 €" },
-            { "order": 70, "name": "Yufka falafel", "price": "6.50 €" },
-            { "order": 80, "name": "Yufka galette de pommes de terre", "price": "6.50 €" }
+            { "order": 10, "name": "Poulet", "price": "8.00 €" },
+            { "order": 20, "name": "Bœuf", "price": "8.00 €" },
+            { "order": 30, "name": "Mixte", "price": "8.50 €" },
+            { "order": 40, "name": "Köfte", "price": "8.50 €" },
+            { "order": 50, "name": "Brochettes de poulet", "price": "8.50 €" },
+            { "order": 60, "name": "Crudités", "price": "7.50 €" },
+            { "order": 70, "name": "Falafel", "price": "6.50 €" },
+            { "order": 80, "name": "Galette de pommes de terre", "price": "6.50 €" },
           ]
         },
         {
@@ -100,7 +100,7 @@
         },
         {
           "title": "Burgers",
-          "badges": ["5 crudités max", "3 sauces max"],
+          "badges": [],
           "items": [
             {
               "order": 10,
@@ -334,7 +334,8 @@
           "name": "Sodas",
           "description": "Coca, Fanta, Sprite, Oasis",
           "price": ""
-        },
+        },        
+        { "order": 15, "name": "Redbull", "price": "2.50 €" },
         { "order": 20, "name": "Expresso", "price": "1.50 €" },
         { "order": 30, "name": "Café long", "price": "2.00 €" },
         { "order": 40, "name": "Bouteille 1.25 L", "price": "3.50 €" },

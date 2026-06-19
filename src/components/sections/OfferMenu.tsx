@@ -40,6 +40,8 @@ export function OfferMenuCard() {
     "Barbecue",
     "Piment en poudre",
     "Sauce fromagère",
+    "Burger Deluxe",
+    "Fish"
   ];
 
   const [isMobile, setIsMobile] = useState(false);
