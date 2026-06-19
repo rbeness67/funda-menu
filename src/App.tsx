@@ -75,7 +75,15 @@ function Home() {
               >
                 <Link to="/menu">Accéder au menu</Link>
               </Button>
-
+              <a
+                href="https://france.booqcloud.com/webshop/Order2POSSomerGrill/"
+                className="
+                  text-base text-stone-400 hover:text-stone-200
+                  underline underline-offset-4 decoration-stone-600
+                "
+              >
+                Click & Collect
+              </a>
               <a
                 href="https://deliveroo.fr/en/menu/strasbourg/cronenbourg/somer-grill"
                 className="
